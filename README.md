@@ -20,6 +20,8 @@ The deno interface for calling ssf.js has been pre-compiled via:
 deno compile --unstable-detect-cjs --target x86_64-pc-windows-msvc --output vendor/ssf_win vendor/main.ts
 
 deno compile --unstable-detect-cjs --target aarch64-apple-darwin --output vendor/ssf_aarm vendor/main.ts
+
+deno compile --unstable-detect-cjs --target x86_64-unknown-linux-gnu --output vendor/ssf_linux vendor/main.ts
 ```
 
 This tool does not require deno to be installed by utilizing the pre-compiled modules. If you want to run ssf.js via deno, pass `deno_script_path=vendor/main.ts` when initializing an SSFFormatter instance.
@@ -30,6 +32,9 @@ This tool does not require deno to be installed by utilizing the pre-compiled mo
 
 **ssf_win** `certutil -hashfile -SHA256 ssf_win` =
 `bf90aaf4fb4b71af8d8b8dbeceb37f5692c9ad4c61f7f978a719701c11942eac`
+
+**ssf_linux** `sha256sum ssf_linux` =
+`dad0d14e07dbe19d45ff5a7ef5cc8a86d1221da133c773dcaecf8434b59aae3e`
 
 ## Usage
 

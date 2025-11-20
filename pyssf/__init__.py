@@ -66,6 +66,11 @@ class SSFFormatter:
                 PurePath(__file__).parent.parent
                 / "vendor/ssf_win.exe"  # Windows executabl
             ]
+        elif SYSTEM == "Linux":
+            exe_call = [
+                PurePath(__file__).parent.parent
+                / "vendor/ssf_linux"  # Linux executable
+            ]
         else:
             raise ValueError("Unsupported platform")
 
